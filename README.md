@@ -1,46 +1,65 @@
-# Scansible - Outil d'automatisation de scans de sécurité
+# <div align="center"><img src="assets/images/noun-anime-5257669.svg" width="60" valign="bottom"/> SCANSIBLE</div>
 
-<p align="center">
-  <img src="https://via.placeholder.com/200x200.png?text=SCANSIBLE" width="200" />
-</p>
+<div align="center">
+  <strong>Automatisation de scans de sécurité avec Ansible</strong><br>
+  <img src="https://img.shields.io/badge/python-3.9+-blue.svg"/>
+  <img src="https://img.shields.io/badge/license-MIT-green.svg"/>
+</div>
 
-## Description
-Scansible est un outil puissant qui automatise les scans de sécurité avec Nmap, RustScan et Trivy via Ansible. Il simplifie l’évaluation des vulnérabilités avec une interface claire et des rapports détaillés.
-
-## Fonctionnalités
-- 🔍 **Multiples types de scans** : rapide, web, infra, passif...
-- 📊 **Rapports HTML interactifs** avec IA
-- 🚀 **Interface CLI intuitive**
-- 🏷️ **Filtrage des vulnérabilités par tags**
+## À propos
+Scansible automatise les scans de sécurité en orchestrant des outils de scans de vulnérabilités via Ansible, avec génération de rapports intelligents.
 
 ## Installation
-### Prérequis
-- Python 3.8+
-- Nmap, RustScan ou Trivy
-- Ansible
-
-### Installation
 ```bash
-git clone https://github.com/Erwan923/Scansible.git
+git clone https://github.com/yourusername/Scansible.git
 cd Scansible
-pip install -r requirements.txt
+pip install -r requirement.txt
+```
 
+## Utilisation
 
-## Types de scans
-| Type | Description | Utilisation |
-|------|-------------|------------|
-| `basic` | Scan standard avec énumération de services | Usage général |
-| `light` | Scan rapide des ports et services principaux | Vérifications rapides |
-| `web` | Détection de vulnérabilités d'applications web | Sites web, API |
-| `infrastructure` | Analyse approfondie de l'infrastructure | Serveurs, réseaux |
-| `passive` | Reconnaissance sans contact direct | Collecte d'informations |
-| `rustscan` | Scan ultra-rapide avec RustScan | Grandes plages d'IP |
-| `trivy` | Analyse de conteneurs et applications | Images Docker |
-## Structure des rapports
-Les rapports sont automatiquement organisés dans les répertoires suivants :
-- `reports/html_reports/` - Rapports HTML interactifs
-- `reports/markdown_reports/` - Rapports en format Markdown
-- `reports/json_reports/` - Résultats bruts au format JSON
-- `reports/xml_reports/` - Résultats bruts au format XML
-## Personnalisation
-Pour chaque.md le user peux ajouté ses propre tools
+### Scans Rapides
+```bash
+# Scan basique
+python main.py 192.168.1.100
+
+# Scan web
+python main.py example.com --type web
+
+# Scan avec tags
+python main.py 192.168.1.100 --tags ssl http
+```
+
+### Types de Scans
+- `basic` - Scan Nmap standard
+- `web` - Vulnérabilités web
+- `passive` - Reconnaissance sans interaction
+- `infrastructure` - Analyse complète
+- `rustscan` - Scan rapide (RustScan)
+- `trivy` - Analyse de conteneurs
+- `light` - Scan léger
+
+### Options Principales
+```bash
+python main.py --help              # Afficher l'aide
+python main.py --list-tags         # Lister les tags disponibles
+python main.py <target> --ai-report # Générer un rapport IA
+python main.py --gui               # Lancer l'interface web
+```
+
+## Rapports
+Les résultats sont disponibles en XML, JSON, Markdown et HTML avec une analyse IA optionnelle.
+
+## Architecture
+```
+├── API REST (FastAPI)
+├── Core (Parser, Scanner)
+├── Rapports (XML/JSON/MD/HTML)
+└── Templates de Scan (Markdown)
+```
+
+## Contribution
+Les contributions sont les bienvenues. Voir [CONTRIBUTING.md](CONTRIBUTING.md) pour plus d'informations.
+
+## Licence
+MIT

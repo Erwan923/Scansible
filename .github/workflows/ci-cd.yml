@@ -1,25 +1,19 @@
 name: CI/CD - Scansible
-
 on:
   push:
-    branches:
-      - main
+    branches: [ master ]
   pull_request:
-    branches:
-      - main
-  release:
-    types: [created]  # Déclenchement lors de la création d'un tag de release
+    branches: [ master ]
 
 jobs:
-  build-and-test:
-    name: 🔍 Lint & Tests
+  test:
+    name: 🧪 Tests & Validation
     runs-on: ubuntu-latest
-
     steps:
       - name: 📥 Checkout du code
         uses: actions/checkout@v3
 
-      - name: 🏗️ Installation de Python et des dépendances
+      - name: 🏗️ Configuration Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.11"
@@ -30,34 +24,10 @@ jobs:
           pip install -r requirement.txt
           pip install pytest flake8
 
-      - name: 🔍 Vérification du code avec flake8
-        run: flake8 .
-
-      - name: ✅ Exécution des tests unitaires avec pytest
-        run: pytest --junitxml=reports/test-results.xml
-
-      - name: 📤 Archivage des rapports de test
-        uses: actions/upload-artifact@v3
-        with:
-          name: test-reports
-          path: reports/
-
-  deploy:
-    name: 🚀 Déploiement
-    needs: build-and-test
-    if: github.event_name == 'release' # Exécute seulement si une release est créée
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: 📥 Checkout du code
-        uses: actions/checkout@v3
-
-      - name: 📦 Création d'un package
-        run: tar -cvf scansible.tar.gz .
-
-      - name: 📤 Upload de l'archive en release GitHub
-        uses: softprops/action-gh-release@v1
-        with:
-          files: scansible.tar.gz
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: 🔍 Lint avec flake8
+        run: |
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        
+      - name: ✅ Tests unitaires
+        run: |
+          pytest -v tests/
