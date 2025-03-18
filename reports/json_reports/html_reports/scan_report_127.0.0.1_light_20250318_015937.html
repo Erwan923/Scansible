@@ -1,0 +1,323 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Security Scan Report - 127.0.0.1</title>
+            <style>
+                :root {
+                    --bg-color: #1a1a1a;
+                    --text-color: #f0f0f0;
+                    --accent-color: #ff3e3e;
+                    --secondary-color: #2d2d2d;
+                    --border-color: #444;
+                    --heading-color: #ff5252;
+                    --link-color: #ff8080;
+                    --success-color: #4caf50;
+                    --warning-color: #ff9800;
+                    --danger-color: #f44336;
+                }
+                
+                body {
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    line-height: 1.6;
+                    color: var(--text-color);
+                    background-color: var(--bg-color);
+                    max-width: 1000px;
+                    margin: 0 auto;
+                    padding: 2rem;
+                }
+                
+                h1, h2, h3, h4, h5, h6 {
+                    font-weight: 600;
+                    margin-top: 1.5rem;
+                    margin-bottom: 1rem;
+                    color: var(--heading-color);
+                }
+                
+                h1 {
+                    font-size: 2.5rem;
+                    text-align: center;
+                    border-bottom: 2px solid var(--accent-color);
+                    padding-bottom: 1rem;
+                    margin-bottom: 2rem;
+                }
+                
+                h2 {
+                    font-size: 1.8rem;
+                    border-bottom: 1px solid var(--border-color);
+                    padding-bottom: 0.5rem;
+                }
+                
+                h3 {
+                    font-size: 1.4rem;
+                    color: var(--accent-color);
+                }
+                
+                ul, ol {
+                    padding-left: 2rem;
+                }
+                
+                li {
+                    margin-bottom: 0.5rem;
+                }
+                
+                p {
+                    margin-bottom: 1rem;
+                }
+                
+                a {
+                    color: var(--link-color);
+                    text-decoration: none;
+                }
+                
+                a:hover {
+                    text-decoration: underline;
+                }
+                
+                code {
+                    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+                    background-color: var(--secondary-color);
+                    padding: 0.2rem 0.4rem;
+                    border-radius: 3px;
+                }
+                
+                pre {
+                    background-color: var(--secondary-color);
+                    padding: 1rem;
+                    border-radius: 4px;
+                    overflow-x: auto;
+                }
+                
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    margin: 1rem 0;
+                }
+                
+                th, td {
+                    padding: 0.75rem;
+                    text-align: left;
+                    border: 1px solid var(--border-color);
+                }
+                
+                th {
+                    background-color: var(--secondary-color);
+                    font-weight: bold;
+                }
+                
+                tr:nth-child(even) {
+                    background-color: rgba(255, 255, 255, 0.05);
+                }
+                
+                .header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 2rem;
+                    background-color: var(--secondary-color);
+                    padding: 1rem;
+                    border-radius: 8px;
+                    border-left: 4px solid var(--accent-color);
+                }
+                
+                .header-info {
+                    flex: 1;
+                }
+                
+                .critical {
+                    color: var(--danger-color);
+                    font-weight: bold;
+                }
+                
+                .high {
+                    color: var(--warning-color);
+                    font-weight: bold;
+                }
+                
+                .medium {
+                    color: #ffd600;
+                }
+                
+                .low {
+                    color: var(--success-color);
+                }
+                
+                .recommendations {
+                    background-color: rgba(255, 62, 62, 0.1);
+                    border-left: 4px solid var(--accent-color);
+                    padding: 1.5rem;
+                    margin: 1.5rem 0;
+                    border-radius: 4px;
+                }
+                
+                .footer {
+                    margin-top: 3rem;
+                    padding-top: 1rem;
+                    border-top: 1px solid var(--border-color);
+                    text-align: center;
+                    font-size: 0.9rem;
+                    color: #888;
+                }
+                
+                .logo {
+                    font-size: 2rem;
+                    font-weight: bold;
+                    color: var(--accent-color);
+                }
+                
+                .summary-stats {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                    gap: 1rem;
+                    margin: 2rem 0;
+                }
+                
+                .stat-card {
+                    background-color: var(--secondary-color);
+                    border-radius: 8px;
+                    padding: 1.5rem;
+                    text-align: center;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                }
+                
+                .stat-value {
+                    font-size: 2.5rem;
+                    font-weight: bold;
+                    color: var(--accent-color);
+                    margin-bottom: 0.5rem;
+                }
+                
+                .stat-label {
+                    font-size: 1rem;
+                    color: #bbb;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="header">
+                <div class="header-info">
+                    <div class="logo">SCANSIBLE</div>
+                    <p>Security Scan Report</p>
+                </div>
+                <div>
+                    <p><strong>Target:</strong> 127.0.0.1</p>
+                    <p><strong>Scan Type:</strong> light</p>
+                    <p><strong>Date:</strong> 2025-03-18 01:59:37</p>
+                </div>
+            </div>
+            
+            <h1>Security Scan Report - 127.0.0.1</h1>
+<h2>Scan Information</h2>
+<ul>
+<li><strong>Target:</strong> 127.0.0.1</li>
+<li><strong>Scan Type:</strong> light</li>
+<li><strong>Date:</strong> 2025-03-18 01:59:37</li>
+</ul>
+<h2>Summary</h2>
+<ul>
+<li><strong>Hosts Scanned:</strong> 1</li>
+<li><strong>Open Ports Found:</strong> 0</li>
+<li><strong>Services Detected:</strong> 0</li>
+</ul>
+<h2>Open Ports</h2>
+<p>No open ports detected.</p>
+<h2>Services Detected</h2>
+<p>No services detected.</p>
+<h2>Security Recommendations</h2>
+<h3>General Recommendations</h3>
+<ul>
+<li>Implement a regular patching schedule for all services</li>
+<li>Consider using a host-based firewall to restrict access to services</li>
+<li>Perform regular security scans to identify new vulnerabilities</li>
+<li>Document all exposed services and justify their necessity</li>
+</ul>
+<hr />
+<p><em>This report was automatically generated by Scansible.</em></p>
+            
+            <div class="footer">
+                <p>Generated by Scansible on 2025-03-18 01:59:37</p>
+                <p>© 2025 Scansible - Automated Security Scanning Tool</p>
+            </div>
+            
+            <script>
+                // Add some simple JavaScript to enhance the report
+                document.addEventListener('DOMContentLoaded', function() {
+                    // Find the Summary section
+                    const summaryHeading = Array.from(document.querySelectorAll('h2')).find(
+                        el => el.textContent.includes('Summary')
+                    );
+                    
+                    if (summaryHeading) {
+                        // Get the stats
+                        const summaryList = summaryHeading.nextElementSibling;
+                        if (summaryList && summaryList.tagName === 'UL') {
+                            const statItems = summaryList.querySelectorAll('li');
+                            const statsData = [];
+                            
+                            statItems.forEach(item => {
+                                const text = item.textContent;
+                                const match = text.match(/([^:]+):\s+(\d+)/);
+                                if (match) {
+                                    statsData.push({
+                                        label: match[1].trim(),
+                                        value: match[2].trim()
+                                    });
+                                }
+                            });
+                            
+                            // Create stats cards
+                            if (statsData.length > 0) {
+                                const statsContainer = document.createElement('div');
+                                statsContainer.className = 'summary-stats';
+                                
+                                statsData.forEach(stat => {
+                                    const card = document.createElement('div');
+                                    card.className = 'stat-card';
+                                    
+                                    const valueEl = document.createElement('div');
+                                    valueEl.className = 'stat-value';
+                                    valueEl.textContent = stat.value;
+                                    
+                                    const labelEl = document.createElement('div');
+                                    labelEl.className = 'stat-label';
+                                    labelEl.textContent = stat.label;
+                                    
+                                    card.appendChild(valueEl);
+                                    card.appendChild(labelEl);
+                                    statsContainer.appendChild(card);
+                                });
+                                
+                                // Replace the list with our stats cards
+                                summaryList.parentNode.replaceChild(statsContainer, summaryList);
+                            }
+                        }
+                    }
+                    
+                    // Style recommendations section
+                    const recommendationsHeading = Array.from(document.querySelectorAll('h2')).find(
+                        el => el.textContent.includes('Recommendations')
+                    );
+                    
+                    if (recommendationsHeading) {
+                        const recommendationsSection = document.createElement('div');
+                        recommendationsSection.className = 'recommendations';
+                        
+                        // Move all elements after the heading and before the next heading into the recommendations section
+                        let currentElement = recommendationsHeading.nextElementSibling;
+                        const elementsToMove = [];
+                        
+                        while (currentElement && (currentElement.tagName !== 'H2')) {
+                            elementsToMove.push(currentElement);
+                            currentElement = currentElement.nextElementSibling;
+                        }
+                        
+                        recommendationsHeading.insertAdjacentElement('afterend', recommendationsSection);
+                        elementsToMove.forEach(el => recommendationsSection.appendChild(el));
+                    }
+                });
+            </script>
+        </body>
+        </html>
+        

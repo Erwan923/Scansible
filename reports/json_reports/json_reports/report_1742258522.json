@@ -1,0 +1,104 @@
+{
+    "nmaprun": {
+        "@scanner": "nmap",
+        "@args": "nmap -p 80,443 --script=http-title,http-headers -oX /home/r3v4n/github-projects/Scansiblev1/reports/scan_report_1742258516.xml 127.0.0.1",
+        "@start": "1742258518",
+        "@startstr": "Tue Mar 18 01:41:58 2025",
+        "@version": "7.92",
+        "@xmloutputversion": "1.05",
+        "scaninfo": {
+            "@type": "connect",
+            "@protocol": "tcp",
+            "@numservices": "2",
+            "@services": "80,443"
+        },
+        "verbose": {
+            "@level": "0"
+        },
+        "debugging": {
+            "@level": "0"
+        },
+        "hosthint": {
+            "status": {
+                "@state": "up",
+                "@reason": "unknown-response",
+                "@reason_ttl": "0"
+            },
+            "address": {
+                "@addr": "127.0.0.1",
+                "@addrtype": "ipv4"
+            },
+            "hostnames": null
+        },
+        "host": {
+            "@starttime": "1742258518",
+            "@endtime": "1742258518",
+            "status": {
+                "@state": "up",
+                "@reason": "conn-refused",
+                "@reason_ttl": "0"
+            },
+            "address": {
+                "@addr": "127.0.0.1",
+                "@addrtype": "ipv4"
+            },
+            "hostnames": {
+                "hostname": {
+                    "@name": "localhost",
+                    "@type": "PTR"
+                }
+            },
+            "ports": {
+                "port": [
+                    {
+                        "@protocol": "tcp",
+                        "@portid": "80",
+                        "state": {
+                            "@state": "closed",
+                            "@reason": "conn-refused",
+                            "@reason_ttl": "0"
+                        },
+                        "service": {
+                            "@name": "http",
+                            "@method": "table",
+                            "@conf": "3"
+                        }
+                    },
+                    {
+                        "@protocol": "tcp",
+                        "@portid": "443",
+                        "state": {
+                            "@state": "closed",
+                            "@reason": "conn-refused",
+                            "@reason_ttl": "0"
+                        },
+                        "service": {
+                            "@name": "https",
+                            "@method": "table",
+                            "@conf": "3"
+                        }
+                    }
+                ]
+            },
+            "times": {
+                "@srtt": "113",
+                "@rttvar": "2862",
+                "@to": "100000"
+            }
+        },
+        "runstats": {
+            "finished": {
+                "@time": "1742258518",
+                "@timestr": "Tue Mar 18 01:41:58 2025",
+                "@summary": "Nmap done at Tue Mar 18 01:41:58 2025; 1 IP address (1 host up) scanned in 0.11 seconds",
+                "@elapsed": "0.11",
+                "@exit": "success"
+            },
+            "hosts": {
+                "@up": "1",
+                "@down": "0",
+                "@total": "1"
+            }
+        }
+    }
+}
