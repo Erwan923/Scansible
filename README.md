@@ -1,71 +1,177 @@
-🚀 RustcScan - Automated Security Scanning & Reporting Tool
+# Scansible - Outil d'automatisation de scans de sécurité
 
-RustcScan is a lightweight, automated security scanning tool designed to streamline vulnerability detection and reporting. It integrates RustScan for fast port scanning, Nmap passive listening for network reconnaissance, and Markdown-based command parsing to dynamically execute scans and generate structured reports.
-🎯 Features
 
-✅ Automated Scanning: Combines RustScan and passive Nmap for comprehensive network assessment.
-✅ Markdown-Driven Execution: Define scan configurations in Markdown files for easy customization.
-✅ Automated Reporting: Generates detailed security reports in Markdown format.
-✅ CLI-Based Efficiency: Simple command-line interface for quick deployment and execution.
-✅ Lightweight & Portable: No complex dependencies, works on Linux/macOS/Windows.
-📦 Installation
-Prerequisites
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣤⣴⣶⣶⣶⣶⣦⣤⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣠⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣄⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⠏⠁⠀⢶⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀
+⠀⠀⢀⣾⣿⣿⣿⣿⣿⣿⡿⠿⣿⠀⠀⠀⠀⣿⠿⢿⣿⣿⣿⣿⣿⣿⣷⡀⠀⠀
+⠀⢠⣾⣿⣿⣿⣿⣿⡿⠋⣠⣴⣿⣷⣤⣤⣾⣿⣦⣄⠙⢿⣿⣿⣿⣿⣿⣷⡄⠀
+⠀⣼⣿⣿⣿⣿⣿⡏⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀⢹⣿⣿⣿⣿⣿⣧⠀
+⢰⣿⣿⣿⣿⣿⡿⠀⣾⣿⣿⣿⣿⠟⠉⠉⠻⣿⣿⣿⣿⣷⠀⢿⣿⣿⣿⣿⣿⡆
+⢸⣿⣿⣿⣿⣿⣇⣰⣿⣿⣿⣿⡇⠀⠀⠀⠀⢸⣿⣿⣿⣿⣆⣸⣿⣿⣿⣿⣿⡇
+⠸⣿⣿⣿⡿⣿⠟⠋⠙⠻⣿⣿⣿⣦⣀⣀⣴⣿⣿⣿⣿⠛⠙⠻⣿⣿⣿⣿⣿⠇
+⠀⢻⣿⣿⣧⠉⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠈⣿⣿⣿⡟⠀
+⠀⠘⢿⣿⣿⣷⣦⣤⣴⣾⠛⠻⢿⣿⣿⣿⣿⡿⠟⠋⣿⣦⣤⠀⣰⣿⣿⡿⠃⠀
+⠀⠀⠈⢿⣿⣿⣿⣿⣿⣿⣷⣶⣤⣄⣈⣁⣠⣤⣶⣾⣿⣿⣷⣾⣿⣿⡿⠁⠀⠀
+⠀⠀⠀⠀⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠙⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠋⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠛⠻⠿⠿⠿⠿⠟⠛⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀
 
-    RustScan (Install Here)
+<img align="right" width="200" src="https://via.placeholder.com/200x200.png?text=SCANSIBLE">
 
-    Nmap (Install Here)
+## Description
 
-    Python 3.8+ (for parsing & reporting)
+Scansible est un outil puissant qui automatise les scans de sécurité en combinant différents outils comme Nmap, RustScan et Trivy via Ansible. Il simplifie le processus d'évaluation de la sécurité de vos systèmes en fournissant une interface uniforme et des rapports détaillés.
 
-Clone the Repository
- git clone https://github.com/yourusername/rustcscan.git
- cd rustcscan
-Install Dependencies
+## Fonctionnalités
+
+- 🔍 **Multiples types de scans** adaptés à différents besoins
+- 🚀 **Interface en ligne de commande simple**
+- 📊 **Rapports HTML interactifs** avec visualisations
+- 🤖 **Génération automatique de rapports** avec IA
+- 🏷️ **Filtrage par tags** pour cibler des vulnérabilités spécifiques
+- 📂 **Organisation automatique des résultats** dans une structure claire
+
+## Installation
+
+### Prérequis
+
+- Python 3.8+
+- Nmap, RustScan ou Trivy (au moins un)
+- Ansible
+
+### Installation
+
+```bash
+# Cloner le dépôt
+git clone https://github.com/yourusername/scansible.git
+cd scansible
+
+# Installer les dépendances
 pip install -r requirements.txt
-🚀 Usage
-1. Run a Security Scan
-python rustcscan.py --input scan_config.md --output report.md
+```
 
-    --input → Markdown file containing scan commands.
+## Utilisation
 
-    --output → Generates a formatted security report in Markdown.
+### Scan basique
 
-2. Example Markdown Configuration
-# Example Scan Configuration
+```bash
+python main.py 192.168.1.1
+```
 
-## Target Network
-- 192.168.1.1/24
+### Types de scans disponibles
 
-## Scan Type
-- rustscan --ulimit 5000 -a 192.168.1.1
-- nmap -sV -p 80,443 192.168.1.1
-3. View the Generated Report
-cat report.md
-📜 Output Example
-# RustcScan Security Report
+```bash
+# Scan léger (rapide)
+python main.py 192.168.1.1 --type light
 
-## Scanned Targets
-- 192.168.1.1
+# Scan web (applications)
+python main.py example.com --type web
 
-## Open Ports
-- 80 (HTTP)
-- 443 (HTTPS)
+# Scan d'infrastructure
+python main.py 192.168.1.1 --type infrastructure
 
-## Service Detection
-- Apache 2.4.48 (Ubuntu)
-- OpenSSH 8.4
-🛠️ Roadmap
+# Scan passif
+python main.py 192.168.1.1 --type passive
 
+# Scan avec RustScan
+python main.py 192.168.1.1 --type rustscan
 
-🤝 Contributing
+# Scan avec Trivy (conteneurs)
+python main.py alpine:latest --type trivy
+```
 
-We welcome contributions! Feel free to fork this repo and submit a pull request. 🙌
-📄 License
+### Filtrage par tags
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-✉️ Contact
+```bash
+# Scan ciblant uniquement les services HTTP et SSL
+python main.py example.com --tags http ssl
+```
 
-📧 Email: your.email@example.com
-🐙 GitHub: YourGitHubProfile
+### Génération de rapports IA
 
+```bash
+# Générer automatiquement un rapport IA
+python main.py 192.168.1.1 --ai-report
+```
 
+### Lister les tags disponibles
+
+```bash
+python main.py --list-tags
+```
+
+## Types de scans
+
+| Type | Description | Utilisation |
+|------|-------------|------------|
+| `basic` | Scan standard avec énumération de services | Usage général |
+| `light` | Scan rapide des ports et services principaux | Vérifications rapides |
+| `web` | Détection de vulnérabilités d'applications web | Sites web, API |
+| `infrastructure` | Analyse approfondie de l'infrastructure | Serveurs, réseaux |
+| `passive` | Reconnaissance sans contact direct | Collecte d'informations |
+| `rustscan` | Scan ultra-rapide avec RustScan | Grandes plages d'IP |
+| `trivy` | Analyse de conteneurs et applications | Images Docker |
+
+## Structure des rapports
+
+Les rapports sont automatiquement organisés dans les répertoires suivants :
+
+- `reports/html_reports/` - Rapports HTML interactifs
+- `reports/markdown_reports/` - Rapports en format Markdown
+- `reports/json_reports/` - Résultats bruts au format JSON
+- `reports/xml_reports/` - Résultats bruts au format XML
+
+## Personnalisation
+
+### Templates de scan
+
+Les templates de scan sont définis dans des fichiers markdown dans le répertoire `scansible/templates/`. Vous pouvez les modifier ou en ajouter de nouveaux pour personnaliser les scans.
+
+Format des templates :
+```markdown
+# Nom du scan
+
+## Nom de la commande
+* Description de la commande
+* `nmap -sS -p 1-1000 [target]`
+* Description: Description détaillée
+* Tags: #tag1 #tag2 #tag3
+```
+
+## Exemples de cas d'utilisation
+
+1. **Audit de sécurité hebdomadaire**
+   ```bash
+   python main.py 192.168.1.0/24 --type basic --ai-report
+   ```
+
+2. **Vérification rapide d'un serveur web**
+   ```bash
+   python main.py example.com --type web --tags http ssl
+   ```
+
+3. **Analyse d'une image Docker**
+   ```bash
+   python main.py nginx:latest --type trivy
+   ```
+
+## Dépannage
+
+### Problèmes courants
+
+- **Aucun outil de scan n'est disponible** : Installez au moins un des outils suivants : Nmap, RustScan ou Trivy
+- **Erreur de permission** : Certains types de scans nécessitent des privilèges élevés, utilisez `sudo`
+- **Rapport incomplet** : Vérifiez que les dépendances pour la génération de rapports sont installées
+
+## Licence
+
+Ce projet est sous licence MIT.
+
+## Développé par
+
+[Votre nom] - [Votre site web/GitHub]
+
+---
+
+*Note: Le frontend web et les fonctionnalités Docker sont en cours de développement.*
