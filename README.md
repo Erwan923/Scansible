@@ -2,7 +2,8 @@
 
 <p align="center">
   <img src="https://via.placeholder.com/200x200.png?text=SCANSIBLE" width="200" />
-</p>
+</p>![Votre texte de paragraphe(1)](https://github.com/user-attachments/assets/17e4d13c-fb42-43f4-bcbb-69ea259e1b09)
+
 
 ## Description
 Scansible est un outil puissant qui automatise les scans de sécurité avec Nmap, RustScan et Trivy via Ansible. Il simplifie l’évaluation des vulnérabilités avec une interface claire et des rapports détaillés.
