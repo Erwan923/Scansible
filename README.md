@@ -1,8 +1,6 @@
 # Scansible - Outil d'automatisation de scans de sécurité
 
-<p align="center">
-  <img src="https://via.placeholder.com/200x200.png?text=SCANSIBLE" width="200" />
-(https://github.com/user-attachments/assets/17e4d13c-fb42-43f4-bcbb-69ea259e1b09)
+https://github.com/user-attachments/assets/17e4d13c-fb42-43f4-bcbb-69ea259e1b09
 
 
 ## Description
