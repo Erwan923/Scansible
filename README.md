@@ -1,10 +1,12 @@
-# <div align="center"><img src="assets/images/noun-anime-5257669.svg" width="60" valign="bottom"/> SCANSIBLE</div>
+# <div align="center"><img src="assets/images/noun-anime-5257669.svg" width="180" valign="bottom" style="filter: invert(21%) sepia(100%) saturate(7414%) hue-rotate(359deg) brightness(94%) contrast(117%);"/><span style="color: #FF0000; font-size: 42px; font-weight: bold;"> SCANSIBLE</span></div>
 
 <div align="center">
   <strong>Automatisation de scans de sécurité avec Ansible</strong><br>
   <img src="https://img.shields.io/badge/python-3.9+-blue.svg"/>
   <img src="https://img.shields.io/badge/license-MIT-green.svg"/>
+</div>
 
+## À propos
 Scansible automatise les scans de sécurité en orchestrant des outils de scans de vulnérabilités via Ansible, avec génération de rapports intelligents.
 
 ## Installation
