@@ -4,14 +4,12 @@
   <strong>Automatisation de scans de sécurité avec Ansible</strong><br>
   <img src="https://img.shields.io/badge/python-3.9+-blue.svg"/>
   <img src="https://img.shields.io/badge/license-MIT-green.svg"/>
-</div>
 
-## À propos
 Scansible automatise les scans de sécurité en orchestrant des outils de scans de vulnérabilités via Ansible, avec génération de rapports intelligents.
 
 ## Installation
 ```bash
-git clone https://github.com/yourusername/Scansible.git
+git clone https://github.com/Erwan923/Scansible.git
 cd Scansible
 pip install -r requirement.txt
 ```
